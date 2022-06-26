@@ -16,10 +16,12 @@ async function main() {
   console.log("Token name:", name);
   console.log("Symbol name:", symbol);
 
-  const MulticallContract = await hre.ethers.getContractFactory("Multicall");
-  const multicall = await MulticallContract.deploy();
-  await multicall.deployed();
-  console.log("Multicall contract deployed to:", multicall.address);
+  if (hre.network.name === "localhost") {
+    const MulticallContract = await hre.ethers.getContractFactory("Multicall");
+    const multicall = await MulticallContract.deploy();
+    await multicall.deployed();
+    console.log("Multicall contract deployed to:", multicall.address);
+  }
 }
 
 main()
