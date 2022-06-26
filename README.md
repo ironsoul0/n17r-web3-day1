@@ -1,3 +1,5 @@
+<img src=".github/n17r.png" alt="Foundry logo" align="right" width="120" />
+
 # N17R - Web3, Day 1
 
 This repo teaches you a basic use of `hardhat` for smart contracts development. We are going to create a simple implementation of `ERC20` standard, test it and deploy to testnet.
