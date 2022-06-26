@@ -5,6 +5,7 @@ require("dotenv/config");
 require("@nomiclabs/hardhat-etherscan");
 
 module.exports = {
+  defaultNetwork: "localhost",
   solidity: "0.8.4",
   networks: {
     rinkeby: {

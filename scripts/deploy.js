@@ -15,6 +15,11 @@ async function main() {
   console.log("Token contract deployed to:", token.address);
   console.log("Token name:", name);
   console.log("Symbol name:", symbol);
+
+  const MulticallContract = await hre.ethers.getContractFactory("Multicall");
+  const multicall = await MulticallContract.deploy();
+  await multicall.deployed();
+  console.log("Multicall contract deployed to:", multicall.address);
 }
 
 main()
